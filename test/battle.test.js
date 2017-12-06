@@ -9,7 +9,7 @@ import squirtle from './data/squirtle.json';
 import pikachu from './data/pikachu.json';
 
 const pikachuStats = calculateBaseStats(pikachu);
-const bulbasaurStats = calculateBaseStats(bulbasaur);
+const charmanderStats = calculateBaseStats(charmander);
 
 describe('pokemon battler', () => {
   it('should return a winner', () => {
@@ -28,7 +28,7 @@ describe('pokemon battler', () => {
     expect(battle(squirtle, bulbasaur)).to.equal('bulbasaur');
   });
 
-  it(`should return bulbasaur from bulbasaur vs pikachu due to total base stats (Bulbasaur: ${bulbasaurStats} vs Pikachu: ${pikachuStats})`, () => {
-    expect(battle(pikachu, bulbasaur)).to.equal('bulbasaur');
+  it(`should return pikachu from charmander vs pikachu due to total base stats (Pikachu: ${pikachuStats} vs Charmander: ${charmanderStats})`, () => {
+    expect(battle(pikachu, charmander)).to.equal('pikachu');
   });
 });
